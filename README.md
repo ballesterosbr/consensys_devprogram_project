@@ -170,14 +170,18 @@ If everything goes well, you will see:
 
 ![Alt text](https://github.com/ballesterosbr/consensys_devprogram_project/blob/master/screenshot.png?raw=true)
 
+**I recommend at this point to running the tests**
+
 ### Possible errors
 
 **If port 8080 is in use and npm don't change it automatically, try to change to :8081, must show:**
 ```
-`Project is running at http://localhost:8081/`
+Project is running at http://localhost:8081/
 ```
 
-**If you have errors running the test, try deleting the file `.babelrc`**
+**If you have errors running the tests, try deleting the file `.babelrc`**
+
+**If you have errors running the tests, check that ethereum-bridge is running, otherwise you will get a revert() exception and the test will fail.**
 
 **If you have Ganache running in a different port from 8545, ethereum-bridge need to start in the same:**
 
