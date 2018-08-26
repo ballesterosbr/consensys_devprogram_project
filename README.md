@@ -314,9 +314,9 @@ Account 3 priv_key - 37c4963d8c5551c701683cd5b6bc2e14d04706eebd2c7f9a711ecc84824
     * If you don't know if the transaction succeed use the link provided or Metamask.
 ---
 * Oraclize API - Only for localhost
-        * The footer show you the price of the Gas in Ether and the ETHUSD price.
-        * Gas price from: [ETHGasStation](https://ethgasstation.info/)
-        * ETHUSD price from: [etherscan.io](https://etherscan.io/)
+    * The footer show you the price of the Gas in Ether and the ETHUSD price.
+    * Gas price from: [ETHGasStation](https://ethgasstation.info/)
+    * ETHUSD price from: [etherscan.io](https://etherscan.io/)
 
 ## Thanks for using this DApp!
 
@@ -388,7 +388,7 @@ Thus, the trust scheme turns to a captivity scheme in which, to maintain the pro
 - Because the best test is to watch if the DApp shows the Gas price and the ETHUSD price. Create a test file it would be the same.
 
 ### Why you create this if uPort exists?
-- Because it could be possible to have differente schemes of Digital Identity in the same Blockchain ecosystem.
+- Because it could be possible to have different schemes of Digital Identity in the same Blockchain ecosystem.
 
 ### This is not a Self-Sovereign Identity project.
 - No, this project gets the concept of self-sovereign identity to apply it to a Digital Identity Model. Think that this is just a project defining a model.
