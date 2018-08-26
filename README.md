@@ -28,12 +28,12 @@ Consensys Academy's 2018 Dev Program Final Project
     - [Implementations details - desing_pattern_decisions.md](https://github.com/ballesterosbr/consensys_devprogram_project/blob/master/design_pattern_decisions.md)
     - [Security details - avoiding_common_attacks.md](https://github.com/ballesterosbr/consensys_devprogram_project/blob/master/avoiding_common_attacks.md)
     - [deployed_addresses.txt](https://github.com/ballesterosbr/consensys_devprogram_project/blob/master/deployed_addresses.txt)
-    - [The existence of this project and his context](#the-existence-of-this-project-and-his-context)
+- [The existence of this project and his context](#the-existence-of-this-project-and-his-context)
 - [FAQs](#faqs)
 
 ## What does this project do?
 
-This project is about a Decentralized Application (DApp) that allows the user to create a Digital Identity based on an standards explained in the [design_patter_desicioons.md]() file.
+This project is about a Decentralized Application (DApp) that allows the user to create a Digital Identity based on an standards explained in the [design_patter_decisions.md](https://github.com/ballesterosbr/consensys_devprogram_project/blob/master/design_pattern_decisions.md) file.
 
 You can compare the behaviour of this DApp with an Identity Provider. 
 
