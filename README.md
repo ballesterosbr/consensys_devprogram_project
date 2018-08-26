@@ -166,11 +166,11 @@ $ npm run dev
 
 Go to [http//localhost:8080](http://localhost:8081/) (if port 8080 is in use, try 8081).
 
+**I recommend at this point to running the tests**
+
 If everything goes well, you will see:
 
 ![Alt text](https://github.com/ballesterosbr/consensys_devprogram_project/blob/master/screenshot.png?raw=true)
-
-**I recommend at this point to running the tests**
 
 ### Possible errors
 
