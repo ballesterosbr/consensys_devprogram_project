@@ -166,6 +166,10 @@ $ npm run dev
 
 Go to [http//localhost:8080](http://localhost:8081/) (if port 8080 is in use, try 8081).
 
+If everything goes well, you will see:
+
+![Alt text](https://github.com/ballesterosbr/consensys_devprogram_project/blob/master/screenshot.png?raw=true)
+
 ### Possible errors
 
 **If port 8080 is in use and npm don't change it automatically, try to change to :8081, must show:**
