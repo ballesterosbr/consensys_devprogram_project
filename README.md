@@ -9,30 +9,25 @@ File:   README
 Consensys Academy's 2018 Dev Program Final Project
 ===
 
-<pre>
-Title:  Decentralized Digital Identity Model
-Author: Alberto Ballesteros Rodríguez
-Mail:   ballesterosbr@protonmail.com
-</pre>
-
 ## Index
 
-* [What does this project do?](#what-does-this-project-do)
-* [Why do you build this project?](#why-do-you-build-this-project)
-* [How to set up?](#how-to-set-up)
-    * [Possible errors](#possible-errors)
-* [What do you need to know as evaluator?](#what-do-you-need-to-know-as-evaluator)
-    * [Use cases](#use-cases)
-    * [How to use this ƉAPP](#how-to-use-this-ƉAPP)
-        * [Localhost](#localhost)
-        * [Rinkeby](#rinkeby)
-    * Documents
-        * [Implementations details - desing_pattern_decisions.md]()
-        * [Security details - avoiding_common_attacks.md]()
-        * [deployed_addresses.txt]()
-        * [Test]()
-* [The existence of this project and his context](#the-existence-of-this-project-and-his-context)
-* [FAQs](#faqs)
+- [What does this project do?](#what-does-this-project-do)
+- [Why do you build this project?](#why-do-you-build-this-project)
+    - [Example 1](#example-1)
+    - [Example 2](#example-2)
+    - [Solution proposed and possible scenario](#solution-proposed-and-possible-scenario)
+- [How to set up?](#how-to-set-up)
+    - [Possible errors](#possible-errors)
+- [What do you need to know as evaluator?](#what-do-you-need-to-know-as-evaluator)
+    - [Use cases](#use-cases)
+- [How to use this ƉAPP](#how-to-use-this-ɖapp)
+- [Test](#test)
+- Documents
+    - [Implementations details - desing_pattern_decisions.md](https://github.com/ballesterosbr/consensys_devprogram_project/blob/master/design_pattern_decisions.md)
+    - [Security details - avoiding_common_attacks.md](https://github.com/ballesterosbr/consensys_devprogram_project/blob/master/avoiding_common_attacks.md)
+    - [deployed_addresses.txt](https://github.com/ballesterosbr/consensys_devprogram_project/blob/master/deployed_addresses.txt)
+    - [The existence of this project and his context](#the-existence-of-this-project-and-his-context)
+- [FAQs](#faqs)
 
 ## What does this project do?
 
@@ -54,14 +49,14 @@ While Ethereum exists, your Identity exists.
 
 In order to understand this project quickly and easily, I will give you two simple examples.
 
-#### Example 1
+### Example 1
 1. You have an account at an Identity Provider such as Facebook (it's the simplest one that I know).
 
 2. You decide to register in a Service Provider with your Facebook account, such as Spotify.
 
 3. You decide for whatever reason to cancel your Facebook account, which is associated with one or more Service Providers. This will cause that you lose the access to those Service Providers.
    
-#### Example 2
+### Example 2
 1. You have an account at an Identity Provider such as Google (GMail).
    
 2. You decide to register in a Service Provider with your Google account.
@@ -70,7 +65,7 @@ In order to understand this project quickly and easily, I will give you two simp
 
 Maybe we can think this is something totally normal and it's defined in the Legal Terms, but we are not here to discuss about that.
 
-#### Solution proposed and possible scenario
+### Solution proposed and possible scenario
 
 A platform that allows you to create, edit or delete a Digital Identity. Always stored encrypted by the user with one or more passwords (this details are explained in the [design_patter_desicioons.md]() file).
 
@@ -86,7 +81,7 @@ In this project, is proposed that you can change any attribute of your Identity 
 
 If you have interest in the subject, read [The existence of this project and his context](#the-existence-of-this-project-and-his-context)
 
-# How to set up?
+## How to set up?
 
 If you have an error during the set up, go to the [Possible errors](#possible-errors) of this document.
 
@@ -137,7 +132,7 @@ $ npm run dev
 
 Go to `http//localhost:8080` (if port 8080 is in use, try 8081).
 
-## Possible errors
+### Possible errors
 
 **If port 8080 is in use and npm don't change it automatically, try to change to :8081, must show:**
 ```
@@ -156,32 +151,32 @@ $ node bridge -a 9 -H 127.0.0.1 -p 9545 --dev
 ```
 ---
 
-# What do you need to know as evaluator?
+## What do you need to know as evaluator?
 
-## Localhost testing
+### Localhost testing
 
-* ENS not available. Test it with Rinkeby! [Why?](#FAQs)
+* ENS not available. Test it with Rinkeby! [Why?](#faqs)
 
-## Rinkeby testing
+### Rinkeby testing
 
 * Oraclize not available, you can see how it works with localhost testing.
 
-### If you want to test this projecct on Rinkeby, feel free to get one of the following accounts:
+#### If you want to test this projecct on Rinkeby, feel free to get one of the following accounts:
 ```
 Account 1 priv_key - ccf3cbd39c8cb3c338743b4a8404c9a288853123e2bbfb5ba8b0750d4d9dfc64
 Account 2 priv_key - 6bc8426286e02bfc39524181be665fe91a44630358fe8b5ffec31fd3953db200
 Account 3 priv_key - 37c4963d8c5551c701683cd5b6bc2e14d04706eebd2c7f9a711ecc84824cf50b
 ```
 
-### If you prefer to use your account, you can get free Ether for testing proposals:
+#### If you prefer to use your account, you can get free Ether for testing proposals:
 
 * [Rinkeby faucet](https://faucet.rinkeby.io/)
 
 ---
 
-## Use cases
+### Use cases
 ---
-### Create a new Digital Identity
+#### Create a new Digital Identity
 1. First, you need to create an Identity pressing the 'Create Identity' button.
 2. Submit the Transaction in MetaMask.
 3. To protect your information, you need to write a password (save it!).
@@ -189,7 +184,7 @@ Account 3 priv_key - 37c4963d8c5551c701683cd5b6bc2e14d04706eebd2c7f9a711ecc84824
 
 ---
 
-### You have changed your email and need to update your Identity.
+#### You have changed your email and need to update your Identity.
 1. Introduce your password (or a new password if you want to protect with a different one).
 2. Mark the checkbox of the 'email' attribute.
 3. Press 'Select Update' to enable the input box of the attribute 'email'.
@@ -199,7 +194,7 @@ Account 3 priv_key - 37c4963d8c5551c701683cd5b6bc2e14d04706eebd2c7f9a711ecc84824
 
 ---
 
-### You have changed more than one attribute and need to update your Identity
+#### You have changed more than one attribute and need to update your Identity
 1. Introduce your password (or a new password if you want to protect with a different one).
 2. Mark the checkbox of all the attributes you want to update.
 3. Press 'Select Update' to enable the input box of all attributes.
@@ -210,7 +205,7 @@ Account 3 priv_key - 37c4963d8c5551c701683cd5b6bc2e14d04706eebd2c7f9a711ecc84824
 
 ---
 
-### You want to remove all your Identity information and protect your data with a different password 
+#### You want to remove all your Identity information and protect your data with a different password 
 1. Click on 'Manage Attributes' tab.
 2. Press 'Remove attributes'.
 3. Submit the Transaction in MetaMask.
@@ -220,7 +215,7 @@ Account 3 priv_key - 37c4963d8c5551c701683cd5b6bc2e14d04706eebd2c7f9a711ecc84824
 
 ---
 
-### You want to forget the Identity associated with your address
+#### You want to forget the Identity associated with your address
 
 1. Click on 'Manage Attributes' tab.
 2. *If your Identity has no attributes go to step 5.*
@@ -232,7 +227,7 @@ Account 3 priv_key - 37c4963d8c5551c701683cd5b6bc2e14d04706eebd2c7f9a711ecc84824
 
 ---
 
-### You don't want to remember your address (0x...) - ONLY RINKEBY
+#### You don't want to remember your address (0x...) - ONLY RINKEBY
  
 1. Click on 'ENS' tab.
 2. Go to the Step I. Write a domain that is available without '.test'.
@@ -246,7 +241,7 @@ Account 3 priv_key - 37c4963d8c5551c701683cd5b6bc2e14d04706eebd2c7f9a711ecc84824
 
 ---
 
-### Display the ENS domain created - ONLY RINKEBY
+#### Display the ENS domain created - ONLY RINKEBY
 1. Click on 'ENS' tab.
 2. In the first input box write your ENS domain. (*You can use a domain that you haven't registered*).
 3. Press 'Check ENS'.
@@ -286,11 +281,11 @@ Account 3 priv_key - 37c4963d8c5551c701683cd5b6bc2e14d04706eebd2c7f9a711ecc84824
 ### Identity.sol
 
 1. Compare struct properties and mapping with the created identity properties.
-   - Test that if you don't have an Identity, the mapping is empty.
-   - Create a new Identity and compare the values of the struct with the expected ones.
+    - Test that if you don't have an Identity, the mapping is empty.
+    - Create a new Identity and compare the values of the struct with the expected ones.
   
 2. Test that it's not possible to create new identities if exist one.
-- If you have an Identity created, you can't create a new one. Used try/catch to get the revert error from the require.
+    - If you have an Identity created, you can't create a new one. Used try/catch to get the revert error from the require.
 
 3. Test that it's possible to remove the identity if it hasn't any attributes.
     - If you have an empty Identity, it's possible to delete it. 
@@ -306,6 +301,7 @@ Account 3 priv_key - 37c4963d8c5551c701683cd5b6bc2e14d04706eebd2c7f9a711ecc84824
 1. Test add function (data and empty data) with different users and testing require conditions.
     - Test adding data with value and without it.
     -  Try to add data with a user that is not the owner of the Identity. Used try/catch to get the revert errors from the require.
+
 2. Test update function (data and empty data) with different users and test require conditions.
     - Test updating the data previosly created with newData and empty data.
     - Try to update data with a user that is not the owner of the Identity. Used try/catch to get the revert errors from the require.
@@ -335,6 +331,8 @@ To avoid the security and usability problems considered by this fragmentation, t
 These IdPs are also Service Providers, that is, implies that the identity used for authenticate in different services such as banks, online stores or the Public Administration, is the identity created as a user of an application suite or a social network.
 
 Thus, the trust scheme turns to a captivity scheme in which, to maintain the profiles of different services the identity, these ones must be maintained in the IdP, without there being any portability process. This situation becomes more critical if it is approached from a legal perspective when approving the terms of use of these IdP, where they are allowed to use that identity for their internal processes of knowledge generation.
+
+---
 
 ## FAQs
 ### Why don't you deploy the ENS in localhost?
