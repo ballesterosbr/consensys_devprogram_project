@@ -20,7 +20,7 @@ Consensys Academy's 2018 Dev Program Final Project
     - [Possible errors](#possible-errors)
 - [What do you need to know as evaluator?](#what-do-you-need-to-know-as-evaluator)
     - [Use cases](#use-cases)
-- [How to use this ƉAPP](#how-to-use-this-ɖapp)
+- [How to use this DAPP?](#how-to-use-this-dapp)
 - [Test](#test)
 - Documents
     - [Implementations details - desing_pattern_decisions.md](https://github.com/ballesterosbr/consensys_devprogram_project/blob/master/design_pattern_decisions.md)
@@ -251,7 +251,7 @@ Account 3 priv_key - 37c4963d8c5551c701683cd5b6bc2e14d04706eebd2c7f9a711ecc84824
 
 ---
 
-## How to use this ƉAPP?
+## How to use this DApp?
 * The first thing is create a new Identity.
 * Once your Identity has been created you must introduce a password in the Password tab.
     * This password can be different for each attribute. Expires after 10 minutes or you can expire it manually.
