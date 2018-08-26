@@ -1,12 +1,13 @@
 ---
 Title:  Decentralized Digital Identity Model
-Author: Alberto Ballesteros
-Date:   August, 2018
+Author: Alberto Ballesteros Rodríguez
+Date:   August 2018
 Mail:   ballesterosbr@protonmail.com
+File:   README
 ---
 
 Consensys Academy's 2018 Dev Program Final Project
-==================================================
+===
 
 <pre>
 Title:  Decentralized Digital Identity Model
@@ -29,6 +30,7 @@ Mail:   ballesterosbr@protonmail.com
         * [Implementations details - desing_pattern_decisions.md]()
         * [Security details - avoiding_common_attacks.md]()
         * [deployed_addresses.txt]()
+        * [Test]()
 * [The existence of this project and his context](#the-existence-of-this-project-and-his-context)
 * [FAQs](#faqs)
 
@@ -276,6 +278,49 @@ Account 3 priv_key - 37c4963d8c5551c701683cd5b6bc2e14d04706eebd2c7f9a711ecc84824
         * ETHUSD price from: [etherscan.io](https://etherscan.io/)
 
 ## Thanks for using this DApp!
+
+---
+
+## Test
+
+### Identity.sol
+
+1. Compare struct properties and mapping with the created identity properties.
+   - Test that if you don't have an Identity, the mapping is empty.
+   - Create a new Identity and compare the values of the struct with the expected ones.
+  
+2. Test that it's not possible to create new identities if exist one.
+- If you have an Identity created, you can't create a new one. Used try/catch to get the revert error from the require.
+
+3. Test that it's possible to remove the identity if it hasn't any attributes.
+    - If you have an empty Identity, it's possible to delete it. 
+    
+4. Test that it's not possible to remove the identity if it has attributes.
+    - If your Identity is not empty you can't delete it and unlink your account with this Identity address.
+    - Used try/catch to get the revert error from the require.
+    
+5. Testing Emergency Stop.
+    - Test only the owner can activate the emergency stop and it works disabling the rest of the functions, except the getters.
+    
+### PersonalIdentity.sol
+1. Test add function (data and empty data) with different users and testing require conditions.
+    - Test adding data with value and without it.
+    -  Try to add data with a user that is not the owner of the Identity. Used try/catch to get the revert errors from the require.
+2. Test update function (data and empty data) with different users and test require conditions.
+    - Test updating the data previosly created with newData and empty data.
+    - Try to update data with a user that is not the owner of the Identity. Used try/catch to get the revert errors from the require.
+
+3. Test getData function with different users and test require conditions
+    - Test anyone can get the Data.
+    - Test that an array index without data cause exception. Used try/catch to get the revert error from the require.
+
+4. Test removeAllData function with different users and test require conditions.
+    - Test only the owner can remove his data. Not possible if the Identity is empty.
+    - Different users can't remove data from another one. Used try/catch to get the revert error from the require.
+
+5. Test selfdestruct (Owner only, non-emtpy PersonalIdentity)
+    - Test destroy function. To test the contract is destroyed, try to run any function and it will fail.
+    - Not possible to destroy if the PersonalIdentity is not empty. Used try/catch to catch de error.
 
 ---
 
