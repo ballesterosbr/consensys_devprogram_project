@@ -89,26 +89,57 @@ If you have an error during the set up, go to the [Possible errors](#possible-er
 
 Clone this repository.
 ```
-git clone https://github.com/ballesterosbr/consensys_devprogram_project.git
+$ git clone https://github.com/ballesterosbr/consensys_devprogram_project.git
+$ cd consensys_devprogram_project/
 ```
 Go to the repository folder.
 ```
-$ npm install
-$ truffle install oraclize-api
+$ npm install //This take a while with some update recommendations.
+``` 
+You must see something like this
+
 ```
+$ ls
+app                          migrations         test
+avoiding_common_attacks.md   node_modules       truffle.js
+contracts                    package.json       webpack.config.js
+deployed_addresses.txt       package-lock.json
+design_pattern_decisions.md  README.md
+
+$ truffle install oraclize-api
+$ ls
+app                          installed_contracts  README.md
+avoiding_common_attacks.md   migrations           test
+contracts                    node_modules         truffle.js
+deployed_addresses.txt       package.json         webpack.config.js
+design_pattern_decisions.md  package-lock.json
+
+```
+A new folder has been created after the installation: `installed_contracts`
 
 Start Ganache or Ganache-cli.
 
-Open a new terminal.
+Open a new terminal in the folder path
 
 ```
+$ cd consensys_devprogram_project/
 $ mkdir ethereum-bridge
 $ git clone https://github.com/oraclize/ethereum-bridge ethereum-bridge
+```
+You will see something like (ethereum-bridge new folder):
+```
+$ ls
+app                          ethereum-bridge      package-lock.json
+avoiding_common_attacks.md   installed_contracts  README.md
+contracts                    migrations           test
+deployed_addresses.txt       node_modules         truffle.js
+design_pattern_decisions.md  package.json         webpack.config.js
+
 $ cd ethereum-bridge
 $ npm install
 $ node bridge -a 9 // This get the 9 account of Ganache
 ```
-**Be careful, Ethereum bridge and Ganache use the same port.**
+**Be careful, Ethereum bridge and Ganache need to use the same port (Ethereum node port).**
 
 From the output of: `node bridge -a 9` copy the line that looks like:
 
@@ -116,15 +147,16 @@ From the output of: `node bridge -a 9` copy the line that looks like:
 
 Ethereum bridge try to connect to http://localhost:8545
 
-At this point, go to /contracts/ and open the file XXXX.sol.
+At this point, go to `/consensys_devprogram_project/contracts` and open the file `OraclizePrice.sol`.
 
 **Replace the existing `OAR = OraclizeAddrResolverI(0x6f485C8BF6fc43eA21...)` with the one you wrote down before**
 
-Open a new terminal.
+Open a new terminal and in the path of the project.
 
 ```
 $ truffle migrate --reset //This will rebuild if you have an existing build
 ```
+Be sure that the account has at least 15 ethers (used for Oraclize).
 
 If the migration is successful.
 
@@ -132,7 +164,7 @@ If the migration is successful.
 $ npm run dev
 ```
 
-Go to `http//localhost:8080` (if port 8080 is in use, try 8081).
+Go to [http//localhost:8080](http://localhost:8081/) (if port 8080 is in use, try 8081).
 
 ### Possible errors
 
@@ -142,7 +174,6 @@ Go to `http//localhost:8080` (if port 8080 is in use, try 8081).
 ```
 
 **If you have errors running the test, try deleting the file `.babelrc`**
-
 
 **If you have Ganache running in a different port from 8545, ethereum-bridge need to start in the same:**
 
