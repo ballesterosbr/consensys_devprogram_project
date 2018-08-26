@@ -812,6 +812,8 @@ window.App = {
         }
       }).catch(function () {
         self.setStatus('addedAttribute', "ERROR: Transaction failed or rejected. Check that your attribute is not empty.");
+        document.getElementById('addAttribute').disabled = false;
+        document.getElementById(inputValue).disabled = false;
       });
     });
   },
