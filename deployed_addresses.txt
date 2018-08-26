@@ -1,0 +1,7 @@
+Rinkeby addresses
+
+	IdentityLib: 0x81af8c4ee14bbe7497ad81fc030b3eb5e53759f0
+	https://rinkeby.etherscan.io/address/0x81af8c4ee14bbe7497ad81fc030b3eb5e53759f0
+
+	Identity: 0x921cc40e56813e6fb985ffb43c2c63a530bf9d41
+	https://rinkeby.etherscan.io/address/0x921cc40e56813e6fb985ffb43c2c63a530bf9d41

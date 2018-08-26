@@ -159,7 +159,7 @@ $ node bridge -a 9 -H 127.0.0.1 -p 9545 --dev
 
 * The DApp is hosted on IPFS, you can test it the same way as localhost, but Oraclize is not available in this demo.
 * Demo URL: https://gateway.ipfs.io/ipfs/QmcoeQKTDu6mVgwJEqFyim8ADbC82RrfLYiWX91d2mmxoR/
-
+* *Please be patient, IPFS sometimes is slow.*
 ### Localhost testing
 
 * ENS not available. Test it with the live demo! [Why?](#faqs)
