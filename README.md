@@ -30,7 +30,7 @@ Mail:   ballesterosbr@protonmail.com
         * [Security details - avoiding_common_attacks.md]()
         * [deployed_addresses.txt]()
 * [The existence of this project and his context](#the-existence-of-this-project-and-his-context)
-* [FAQs](#FAQs)
+* [FAQs](#faqs)
 
 ## What does this project do?
 
