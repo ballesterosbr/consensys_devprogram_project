@@ -291,7 +291,7 @@ These IdPs are also Service Providers, that is, implies that the identity used f
 
 Thus, the trust scheme turns to a captivity scheme in which, to maintain the profiles of different services the identity, these ones must be maintained in the IdP, without there being any portability process. This situation becomes more critical if it is approached from a legal perspective when approving the terms of use of these IdP, where they are allowed to use that identity for their internal processes of knowledge generation.
 
-## FAQS
+## FAQs
 ### Why don't you deploy the ENS in localhost?
 - The difficult part is to connect with the real smart contracts deployed on Rinkeby and set up a friendly UI where the user can register a domain using ENS, ignoring all the scripts and code necessary to register a domain with ENS. I think it has much more value the use with a 'real' net like Rinkeby.
 
