@@ -1,0 +1,339 @@
+html {
+  background-image: url("https://www.dropbox.com/s/52hp8ja5gx9gz54/ethereum-wallpaper.jpg?raw=1"); 
+
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: top right;
+}
+
+body {
+  margin-left: 5%;
+  font-family: "Open Sans", sans-serif;
+}
+
+#parameters {
+  display: inline-block;
+  color: #001c66;
+  font-size: 20px;
+  width: 200px;
+}
+
+/*
+label {
+  display: inline-block;
+  color: #001c66;
+  font-size: 20px;
+  width: 200px;
+}*/
+
+input , select, option{
+  width: 500px;
+  padding: 5px;
+  font-family: "Roboto", sans-serif;
+  border-radius: 10px;
+  border-width: 0px;
+  padding: 10px;
+  font-size: 20px;
+  color:#62759D;
+  background: -webkit-linear-gradient(left, rgb(241, 241, 241), rgba(255,0,0,0)); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, rgb(241, 241, 241), rgba(255,0,0,0)); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, rgb(241, 241, 241), rgba(255,0,0,0)); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, rgb(232, 235, 254), rgba(255,0,0,0)); /* Standard syntax (must be last) */
+}
+input::placeholder {
+  color:rgb(58, 70, 95);
+}
+/*
+select {
+  margin-left: -3px;
+  width: 526px;
+  padding: 5px;
+  font-size: 16px;
+}
+*/
+button {
+  font-size: 16px;
+  padding: 5px;
+}
+
+h1, h2 {
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  color: #848DAC;
+  font-size: 32px;
+}
+
+h3 {
+  font-weight: normal;
+  color: #62759D;
+  font-size: 28px;
+}
+
+h4 {
+  font-weight: normal;
+  color: #62759D;
+  font-size: 24px;
+}
+
+h5 {
+  font-weight: normal;
+  color: #62759D;
+  font-size: 20px;
+}
+hr {
+  margin-right: 25%;
+  color: #62759D;
+}
+
+ul, li {
+  width: 80%;
+  font-weight: normal;
+  color: #62759D;
+  font-size: 20px;
+  padding-top: 5px;
+}
+
+span {
+  color: #001c66;
+  font-size: 18px;
+}
+
+.black {
+  color: black;
+}
+
+.hint {
+  color: #666;
+}
+
+#passwordStatus, #destroyStatus, #emergencyStatus {
+  color:red;
+  font-size: 20px;
+}
+
+#oraclizeStatus, #oraclizePrice, #oraclizeGas {
+  font-size: 17px;
+  color: #0187b0;
+}
+#oraclizeDiv {
+  padding: 10px;
+  margin: auto;
+  max-width: 750px;
+  text-align: center;
+  border: 2px solid #408C99;
+  border-radius: 0px 28px 0px 28px;
+  font-size: 17px;
+  color: #0187b0;
+}
+#identityStatus, #manageStatus, #addStatus, #homeStatus, #addAttributeStatus, #addedAttribute, #removeStatus, #ENSStatus, #updateStatus {
+  font-size: 20px;
+  color: #0187b0;
+}
+
+#title {
+  font-style: italic;
+  font-family: "Roboto", sans-serif;
+  color: #62759D;
+  font-size: 20px;
+}
+
+#instructions {
+  line-height: 1px;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  color: #62759D;
+  font-size: 20px;
+}
+
+#address {
+    font-family: "Roboto", sans-serif;
+    overflow: hidden;
+    padding: 10px;
+    border: 0px solid #ccc;
+    border-top-left-radius: 20px;
+    background: -webkit-linear-gradient(left, rgb(241, 241, 241), rgba(255,0,0,0)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, rgb(241, 241, 241), rgba(255,0,0,0)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, rgb(241, 241, 241), rgba(255,0,0,0)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, rgb(232, 235, 254), rgba(255,0,0,0)); /* Standard syntax (must be last) */
+}
+
+#id_info, td, th{
+  color: #001c66;
+  font-size: 20px;
+  width: 800px;
+  margin-left: 22px;
+}
+
+
+#createIdentity, #ownIdentity, #howWorks, #addAttribute, #updateAttribute, #loadIdentity, #passwordButton, #showAll, #checkboxUpdate, #ensButton_1, #ensButton_2, #ensButton_3, #ensButton_4, #GetENS {
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #599bb3), color-stop(1, #408c99));
+    background:-moz-linear-gradient(top, #599bb3 5%, #408c99 100%);
+    background:-webkit-linear-gradient(top, #599bb3 5%, #408c99 100%);
+    background:-o-linear-gradient(top, #599bb3 5%, #408c99 100%);
+    background:-ms-linear-gradient(top, #599bb3 5%, #408c99 100%);
+    background:linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#599bb3', endColorstr='#408c99',GradientType=0);
+    background-color:#599bb3;
+    border-radius:28px;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:21px;
+    padding:10px 35px;
+  }
+
+#createIdentity:hover, #ownIdentity:hover, #howWorks:hover, #addAttribute:hover, #updateAttribute:hover, #loadIdentity:hover, #passwordButton:hover, #showAll:hover, #checkboxUpdate:hover, #ensButton_1:hover, #ensButton_2:hover, #ensButton_3:hover, #ensButton_4:hover, #GetENS:hover {
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #408c99), color-stop(1, #599bb3));
+    background:-moz-linear-gradient(top, #408c99 5%, #599bb3 100%);
+    background:-webkit-linear-gradient(top, #408c99 5%, #599bb3 100%);
+    background:-o-linear-gradient(top, #408c99 5%, #599bb3 100%);
+    background:-ms-linear-gradient(top, #408c99 5%, #599bb3 100%);
+    background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#408c99', endColorstr='#599bb3',GradientType=0);
+    background-color:#408c99;
+}
+  
+#createIdentity:active, #ownIdentity:active, #howWorks:active, #addAttribute:active, #updateAttribute:active, #loadIdentity:active, #passwordButton:active, #showAll:active, #checkboxUpdate:active, #ensButton_1:active, #ensButton_2:active, #ensButton_3:active, #ensButton_4:active, #GetENS:active {
+    top:1px;
+}
+
+#deleteIdentity, #removeAttribute, #stopPassword, #emergency, #forgetIdentity {
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #d40202), color-stop(1, #991309));
+    background:-moz-linear-gradient(top, #d40202 5%, #991309 100%);
+    background:-webkit-linear-gradient(top, #d40202 5%, #991309 100%);
+    background:-o-linear-gradient(top, #d40202 5%, #991309 100%);
+    background:-ms-linear-gradient(top, #d40202 5%, #991309 100%);
+    background:linear-gradient(to bottom, #d40202 5%, #991309 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#d40202', endColorstr='#991309',GradientType=0);
+    background-color:#d40202;
+    -moz-border-radius:28px;
+    -webkit-border-radius:28px;
+    border-radius:28px;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:21px;
+    padding:10px 35px;
+  }
+#deleteIdentity:hover, #removeAttribute:hover, #stopPassword:hover, #emergency:hover, #forgetIdentity:hover {
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #991309), color-stop(1, #d40202));
+    background:-moz-linear-gradient(top, #991309 5%, #d40202 100%);
+    background:-webkit-linear-gradient(top, #991309 5%, #d40202 100%);
+    background:-o-linear-gradient(top, #991309 5%, #d40202 100%);
+    background:-ms-linear-gradient(top, #991309 5%, #d40202 100%);
+    background:linear-gradient(to bottom, #991309 5%, #d40202 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#991309', endColorstr='#d40202',GradientType=0);
+    background-color:#991309;
+  }
+
+  #deleteIdentity:active, #removeAttribute:active, #stopPassword:active, #emergency:active, #forgetIdentity:active {
+    top:1px;
+  }
+
+ /* Style the tab */
+div.tab {
+    overflow: hidden;
+    border: 0px solid #ccc;
+    border-top-left-radius: 20px;
+    background: -webkit-linear-gradient(left, rgb(241, 241, 241), rgba(255,0,0,0)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, rgb(241, 241, 241), rgba(255,0,0,0)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, rgb(241, 241, 241), rgba(255,0,0,0)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, rgb(232, 235, 254), rgba(255,0,0,0)); /* Standard syntax (must be last) */
+}
+
+/* Style the buttons inside the tab */
+div.tab button {
+  outline: 0;
+    background-color: inherit;
+    float: left;
+    color: #62759D;
+    font-size: 22px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+    padding: 14px 24px;
+    transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+div.tab button:hover {
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  text-shadow: 1px 1px 1px;
+  transition: 1s;
+}
+
+/* Create an active/current tablink class */
+div.tab button.active {
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  text-shadow: 1px 1px 1px;
+  transition: 1s;
+}
+.container {
+
+  padding-left: 40px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container input {
+  width: 20px;
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  height: 38px;
+  width: 38px;
+  border-radius: 28px;
+  background-color: #eee;
+}
+
+.container:hover input ~ .checkmark {
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #408c99), color-stop(1, #599bb3));
+  background:-moz-linear-gradient(top, #408c99 5%, #599bb3 100%);
+  background:-webkit-linear-gradient(top, #408c99 5%, #599bb3 100%);
+  background:-o-linear-gradient(top, #408c99 5%, #599bb3 100%);
+  background:-ms-linear-gradient(top, #408c99 5%, #599bb3 100%);
+  background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#408c99', endColorstr='#599bb3',GradientType=0);
+  background-color:#408c99;
+}
+
+.container input:checked ~ .checkmark {
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #408c99), color-stop(1, #599bb3));
+  background:-moz-linear-gradient(top, #408c99 5%, #599bb3 100%);
+  background:-webkit-linear-gradient(top, #408c99 5%, #599bb3 100%);
+  background:-o-linear-gradient(top, #408c99 5%, #599bb3 100%);
+  background:-ms-linear-gradient(top, #408c99 5%, #599bb3 100%);
+  background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#408c99', endColorstr='#599bb3',GradientType=0);
+  background-color:#408c99;
+}
+
+
+/* Style the tab content */
+/*.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+*/
