@@ -9,7 +9,7 @@ File:   README
 Consensys Academy's 2018 Dev Program Final Project
 ===
 
-## [Live Demo on IPFS](https://gateway.ipfs.io/ipfs/QmcoeQKTDu6mVgwJEqFyim8ADbC82RrfLYiWX91d2mmxoR/)
+## [Live Demo on IPFS](https://gateway.ipfs.io/ipfs/QmWm2jDY2SZ7uyuPGpLFqiQcmZNvF8NDa7EmcdQSAdgURA/)
 
 ## Index
 
@@ -194,10 +194,10 @@ $ node bridge -a 9 -H 127.0.0.1 -p 9545 --dev
 
 ## What do you need to know as evaluator?
 
-### IPFS Hosting - [Live Demo on IPFS](https://gateway.ipfs.io/ipfs/QmcoeQKTDu6mVgwJEqFyim8ADbC82RrfLYiWX91d2mmxoR/)
+### IPFS Hosting - [Live Demo on IPFS](https://gateway.ipfs.io/ipfs/QmWm2jDY2SZ7uyuPGpLFqiQcmZNvF8NDa7EmcdQSAdgURA/)
 
 * The DApp is hosted on IPFS, you can test it the same way as localhost, but Oraclize is not available in this demo.
-* Demo URL: https://gateway.ipfs.io/ipfs/QmcoeQKTDu6mVgwJEqFyim8ADbC82RrfLYiWX91d2mmxoR/
+* Demo URL: https://gateway.ipfs.io/ipfs/QmWm2jDY2SZ7uyuPGpLFqiQcmZNvF8NDa7EmcdQSAdgURA/
 * *Please be patient, IPFS sometimes is slow.*
 ### Localhost testing
 
