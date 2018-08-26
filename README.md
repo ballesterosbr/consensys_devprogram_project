@@ -89,7 +89,7 @@ If you have an error during the set up, go to the [Possible errors](#possible-er
 
 Clone this repository.
 ```
-git clone XXXX
+git clone https://github.com/ballesterosbr/consensys_devprogram_project.git
 ```
 Go to the repository folder.
 ```
