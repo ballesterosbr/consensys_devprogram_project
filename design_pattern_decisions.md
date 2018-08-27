@@ -11,19 +11,17 @@ Desing Patters Decisions
 
 ## Index
 
-- [Desing Patters Decisions](#desing-patters-decisions)
-	- [Index](#index)
-	- [Contract structure](#contract-structure)
-		- [Factory contract](#factory-contract)
-		- [Restricting Access - Modifiers](#restricting-access---modifiers)
-		- [Emergency Stop](#emergency-stop)
-		- [Struct](#struct)
-		- [Mapping](#mapping)
-		- [Library](#library)
-		- [Dynamic Array (upgradable pattern)](#dynamic-array-upgradable-pattern)
-		- [Lifetime (Mortal) - Only advanced users](#lifetime-mortal---only-advanced-users)
-	- [Oraclize contract](#oraclize-contract)
-	- [Other possible implementatios](#other-possible-implementatios)
+- [Contract structure](#contract-structure)
+	- [Factory contract](#factory-contract)
+	- [Restricting Access - Modifiers](#restricting-access---modifiers)
+	- [Emergency Stop](#emergency-stop)
+	- [Struct](#struct)
+	- [Mapping](#mapping)
+	- [Library](#library)
+	- [Dynamic Array (upgradable pattern)](#dynamic-array-upgradable-pattern)
+	- [Lifetime (Mortal) - Only advanced users](#lifetime-mortal---only-advanced-users)
+- [Oraclize contract](#oraclize-contract)
+- [Other possible implementatios](#other-possible-implementatios)
 
 ## Contract structure
 
