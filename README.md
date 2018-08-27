@@ -45,7 +45,7 @@ You can compare the behaviour of this DApp with an Identity Provider.
 
 Please, always take this project as a model based on the Self-Sovereign Identity concept.
 
-This project seeks to decentralize Digital Identity and remove the fragmentation caused by creating a different identity for each service. The application doesn't get any information about you, only encrypts and send it to the Ethereum blockchain.
+This project seeks to decentralize Digital Identity and remove the fragmentation caused by creating a different identity for each service. The application doesn't get any information about you, only encrypts and send it to the Ethereum blockchain, making possible that can be readed by a Service Provider.
 
 While Ethereum exists, your Identity exists.
 
@@ -56,20 +56,20 @@ In order to understand this project quickly and easily, I will give you two simp
 
 2. You decide to register in a Service Provider with your Facebook account, such as Spotify.
 
-3. You decide for whatever reason to cancel your Facebook account, which is associated with one or more Service Providers. This will cause that you lose the access to those Service Providers.
+3. You decide for whatever reason to cancel your Facebook account, which is associated with one or more Service Providers. This will cause that you lose the access to your associated Service Providers.
    
 ### Example 2
 1. You have an account at an Identity Provider such as Google (GMail).
    
 2. You decide to register in a Service Provider with your Google account.
    
-3. You decide for whatever reason to cancel your Google account, which is associated with one or more Service Providers. This will cause that you lose the access to those Service Providers.
+3. You decide for whatever reason to cancel your Google account, which is associated with one or more Service Providers. This will cause that you lose the access to your associated Service Providers.
 
 Maybe we can think this is something totally normal and it's defined in the Legal Terms, but we are not here to discuss about that.
 
 ### Solution proposed and possible scenario
 
-A platform that allows you to create, edit or delete a Digital Identity. Always stored encrypted by the user with one or more passwords (this details are explained in the [avoiding_common_attacks.md](https://github.com/ballesterosbr/consensys_devprogram_project/blob/master/avoiding_common_attacks.md) file).
+A platform that allows you to create, edit or delete a Digital Identity. Always encrypted by the user with one or more passwords (this details are explained in the [avoiding_common_attacks.md](https://github.com/ballesterosbr/consensys_devprogram_project/blob/master/avoiding_common_attacks.md) file).
 
 In this project, is proposed that you can change any attribute of your Identity without losing the access with a Service Provider.
 
@@ -79,13 +79,13 @@ In this project, is proposed that you can change any attribute of your Identity 
   
 - For some reason you delete your Google account and create a email with Protonmail.
   
-- With the DApp, you can update your email attribute of your Identity without losing the access to the Service Provider where you are registered. (Obviously you must update the information in the Service Provider).
+- With this DApp, you can update your email attribute of your Identity without losing the access to the Service Provider where you are registered. (Obviously you must update the information in the Service Provider).
 
 If you have interest in the subject, read [The existence of this project and his context](#the-existence-of-this-project-and-his-context)
 
 ## How to set up?
 
-If you have an error during the set up, go to the [Possible errors](#possible-errors) of this document.
+If you have an error during the set up, go to the [Possible errors](#possible-errors) sections of this document.
 
 Clone this repository.
 ```
@@ -96,7 +96,7 @@ Go to the repository folder.
 ```
 $ npm install //This take a while with some update recommendations.
 ``` 
-You must see something like this
+You must see something like this:
 
 ```
 $ ls
@@ -105,7 +105,9 @@ avoiding_common_attacks.md   node_modules       truffle.js
 contracts                    package.json       webpack.config.js
 deployed_addresses.txt       package-lock.json
 design_pattern_decisions.md  README.md
-
+```
+This project uses Oraclize, so you need to install the oraclize-api.
+```
 $ truffle install oraclize-api
 $ ls
 app                          installed_contracts  README.md
@@ -119,7 +121,7 @@ A new folder has been created after the installation: `installed_contracts`
 
 Start Ganache or Ganache-cli.
 
-Open a new terminal in the folder path
+Open a new terminal and go to the project path. Now you are going to install ethereum-bridge to communicate with the Oracle.
 
 ```
 $ cd consensys_devprogram_project/
@@ -154,9 +156,9 @@ At this point, go to `/consensys_devprogram_project/contracts` and open the file
 Open a new terminal and in the path of the project.
 
 ```
-$ truffle migrate --reset //This will rebuild if you have an existing build
+$ truffle migrate --reset // Use --reset if you have a previous build.
 ```
-Be sure that the account has at least 15 ethers (used for Oraclize).
+Be sure that the account (usually the first account of Ganache) has at least 15 ethers (used for Oraclize).
 
 If the migration is successful.
 
@@ -166,7 +168,7 @@ $ npm run dev
 
 Go to [http//localhost:8080](http://localhost:8081/) (if port 8080 is in use, try 8081).
 
-**I recommend at this point to running the tests**
+**I recommend at this point to running the tests.**
 
 If everything goes well, you will see:
 
@@ -178,12 +180,17 @@ If everything goes well, you will see:
 ```
 Project is running at http://localhost:8081/
 ```
+**If you see something like this:**
+```
+WARN log with contract myid: 0x1e84508fa52c2d976ef07fe21f02446249a23e0a0b20eeaee263fa309b9c7e49 was triggered, but it was already seen before, skipping event...
+```
+**I recommend you to restart the set up tutorial and delete the `build` folder, don't forget to replace the new OraclizeAddrResolver**
 
 **If you have errors running the tests, try deleting the file `.babelrc`**
 
-**If you have errors running the tests, check that ethereum-bridge is running, otherwise you will get a revert() exception and the test will fail.**
+**If you have errors running the tests, check that ethereum-bridge is running, otherwise you will get a revert() exception and the tests will fail.**
 
-**If you have Ganache running in a different port from 8545, ethereum-bridge need to start in the same:**
+**If you have Ganache running in a different port from 8545, ethereum-bridge need to start in the same port as Ganache:**
 
 ```
 $ node bridge -a 9 -H 127.0.0.1 -p ganachePort --dev
@@ -199,7 +206,7 @@ $ node bridge -a 9 -H 127.0.0.1 -p 9545 --dev
 * The DApp is hosted on IPFS, you can test it the same way as localhost, but Oraclize is not available in this demo.
 * Demo URL: https://gateway.ipfs.io/ipfs/QmWm2jDY2SZ7uyuPGpLFqiQcmZNvF8NDa7EmcdQSAdgURA/
 * *Please be patient, IPFS sometimes is slow.*
-* **Please, be sure you have MetaMask installed, otherwise the webpage won't load correctly**
+* **Please, be sure you have MetaMask installed, otherwise the webpage won't load correctly.**
 
 ### Localhost testing
 
@@ -209,7 +216,7 @@ $ node bridge -a 9 -H 127.0.0.1 -p 9545 --dev
 
 * Oraclize not available, you can see how it works with localhost testing.
 
-#### If you want to test this projecct on Rinkeby, feel free to get one of the following accounts:
+#### If you want to test this project on Rinkeby, feel free to get one of the following accounts:
 ```
 Account 1 priv_key - ccf3cbd39c8cb3c338743b4a8404c9a288853123e2bbfb5ba8b0750d4d9dfc64
 Account 2 priv_key - 6bc8426286e02bfc39524181be665fe91a44630358fe8b5ffec31fd3953db200
@@ -283,7 +290,7 @@ Account 3 priv_key - 37c4963d8c5551c701683cd5b6bc2e14d04706eebd2c7f9a711ecc84824
 4. Go to the Step II. Write the same domain that you register, but with '.test' now.
 5. Press 'Save'. (*You can check de status using the link provided*).
 6. Go to the Step III. Write the same domain that you saved.
-7. Press 'Link'.
+7. Press 'Link'. (*You can check de status using the link provided*).
 
 *You can register more than one domain. Only need to repeat the steps.*
 
@@ -307,7 +314,7 @@ Account 3 priv_key - 37c4963d8c5551c701683cd5b6bc2e14d04706eebd2c7f9a711ecc84824
 ---
 * When you introduce a password, you are able to add new attributes to your Identity, be aware about the messages that appear when you are writing.
 * After that, you can see, update or remove your attributes.
-    * Show attribute: Select with the checkbox the attribute or attrubutes that you want to update, then press 'Show All' and wait until you can see your attribute in the input box. You need the same password you used for add the attributes.
+    * Show attribute: Select with the checkbox the attribute or attributes that you want to update, then press 'Show All' and wait until you can see your attribute in the input box. You need the same password you used for adding the attributes.
     * Update attribute: Select with the checkbox the attribute or attributes that you want to update, then press 'Select Update', write your new attribute in the input box and finally press 'Update Attributes'. This will create one transaction per attribute, you can submit all.
     * Remove attributes: This will remove ALL your attributes and clean your Identity. You don't need to use the checkbox here.
 --- 
