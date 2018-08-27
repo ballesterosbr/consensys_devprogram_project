@@ -69,7 +69,7 @@ Maybe we can think this is something totally normal and it's defined in the Lega
 
 ### Solution proposed and possible scenario
 
-A platform that allows you to create, edit or delete a Digital Identity. Always stored encrypted by the user with one or more passwords (this details are explained in the [design_patter_desicioons.md]() file).
+A platform that allows you to create, edit or delete a Digital Identity. Always stored encrypted by the user with one or more passwords (this details are explained in the [avoiding_common_attacks.md](https://github.com/ballesterosbr/consensys_devprogram_project/blob/master/avoiding_common_attacks.md) file).
 
 In this project, is proposed that you can change any attribute of your Identity without losing the access with a Service Provider.
 
@@ -199,6 +199,7 @@ $ node bridge -a 9 -H 127.0.0.1 -p 9545 --dev
 * The DApp is hosted on IPFS, you can test it the same way as localhost, but Oraclize is not available in this demo.
 * Demo URL: https://gateway.ipfs.io/ipfs/QmWm2jDY2SZ7uyuPGpLFqiQcmZNvF8NDa7EmcdQSAdgURA/
 * *Please be patient, IPFS sometimes is slow.*
+* **Please, be sure you have MetaMask installed, otherwise the webpage won't load correctly**
 
 ### Localhost testing
 
