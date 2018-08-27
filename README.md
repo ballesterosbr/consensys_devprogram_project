@@ -216,7 +216,7 @@ $ node bridge -a 9 -H 127.0.0.1 -p 9545 --dev
 
 * Oraclize not available, you can see how it works with localhost testing.
 * When you use the DApp hosted on IPFS think that this is a real network with traffic, and some functionalities that worked fine in localhost will be affected
-* 
+  
 #### If you want to test this project on Rinkeby, feel free to get one of the following accounts:
 ```
 Account 1 priv_key - ccf3cbd39c8cb3c338743b4a8404c9a288853123e2bbfb5ba8b0750d4d9dfc64
