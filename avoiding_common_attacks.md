@@ -10,27 +10,29 @@ Avoiding Common Attacks
 ===
 
 ## Index
-- [Race Conditions](#race-conditions)
-	- [Reentrancy & Pitfalls in Race Condition Solutions](#reentrancy--pitfalls-in-race-condition-solutions)
-	- [Cross-function Race Conditions](#cross-function-race-conditions)
-- [Transaction-Ordering Dependence (TOP) /Front Running](#transaction-ordering-dependence-top-front-running)
-- [Timestamp Dependence](#timestamp-dependence)
-- [Integer Overflow and Underflow](#integer-overflow-and-underflow)
-- [DoS with (Unexpected) revert](#dos-with-unexpected-revert)
-- [DoS with Block Gas Limit](#dos-with-block-gas-limit)
-- [Forcibly Sending Ether to a Contract](#forcibly-sending-ether-to-a-contract)
-- [Recommendations](#recommendations)
-	- [Remember that on-chain data is public](#remember-that-on-chain-data-is-public)
-		- [AES Encryption](#aes-encryption)
-	- [Require use](#require-use)
-	- [Explicitly mark visibility in functions and state variables](#explicitly-mark-visibility-in-functions-and-state-variables)
-	- [Lock pragmas to specific compiler version](#lock-pragmas-to-specific-compiler-version)
-	- [Differentiate functions and events](#differentiate-functions-and-events)
-	- [Avoid using tx.origin](#avoid-using-txorigin)
+- [Avoiding Common Attacks](#avoiding-common-attacks)
+	- [Index](#index)
+	- [Race Conditions](#race-conditions)
+		- [Reentrancy & Pitfalls in Race Condition Solutions](#reentrancy--pitfalls-in-race-condition-solutions)
+		- [Cross-function Race Conditions](#cross-function-race-conditions)
+	- [Transaction-Ordering Dependence (TOP) /Front Running](#transaction-ordering-dependence-top-front-running)
+	- [Timestamp Dependence](#timestamp-dependence)
+	- [Integer Overflow and Underflow](#integer-overflow-and-underflow)
+	- [DoS with (Unexpected) revert](#dos-with-unexpected-revert)
+	- [DoS with Block Gas Limit](#dos-with-block-gas-limit)
+	- [Forcibly Sending Ether to a Contract](#forcibly-sending-ether-to-a-contract)
+	- [Recommendations](#recommendations)
+		- [Remember that on-chain data is public](#remember-that-on-chain-data-is-public)
+			- [AES Encryption](#aes-encryption)
+		- [Require use](#require-use)
+		- [Explicitly mark visibility in functions and state variables](#explicitly-mark-visibility-in-functions-and-state-variables)
+		- [Lock pragmas to specific compiler version](#lock-pragmas-to-specific-compiler-version)
+		- [Differentiate functions and events](#differentiate-functions-and-events)
+		- [Avoid using tx.origin](#avoid-using-txorigin)
 
 ## Race Conditions
 
-The design of the smart contracts of this project has been focused on not storing any Ether in the smart contracts. (revisar)
+The design of the smart contracts of this project doesn't use any Ether.
 
 ### Reentrancy & Pitfalls in Race Condition Solutions
 
@@ -86,19 +88,19 @@ The code does not need to make calculations based on the contract's balance.
 
 ### Remember that on-chain data is public
 
-The DApp created developed in the project manage information that can be considered sensitive.
+The DApp developed in the project manage information that can be considered sensitive.
 
-In the design_patter_decisions.md file, you can find what solutions have been proposed to make the sending of information more secure despite the public nature of the blockchain.
+Now, you can find what solution has been proposed to make the sending of information more secure despite the public nature of the blockchain.
 
 #### AES Encryption
 
 As commented before, this DApp manage information about the users.
 
-To protect this information, in the client side has been implemented the crypto module [node.js crypto](https://nodejs.org/api/crypto.html).
+To protect this information, in the client side has been implemented the [node.js Crypto module](https://nodejs.org/api/crypto.html).
 
 Before the user can push his information to the blockchain, is necessary to encrypt the attributes of the Identity using a password.
 
-Some rules have been set for password:
+Some rules have been set for password, based on brute force attacks protection:
 - Contain at least one number
 - Contain at least one lower case
 - Contain at least one upper case

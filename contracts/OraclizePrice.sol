@@ -36,7 +36,7 @@ contract OraclizePrice is usingOraclize {
         public 
         payable
     {
-        // Replace the next line with your version:ç
+        // Replace the next line with your version:
         OAR = OraclizeAddrResolverI(0x1d05bADcBD3F4657d478dEbB471534156523b3D3);
         getPriceDetails();
         getGasDetails();

@@ -9,7 +9,7 @@ import "./IdentityLib.sol";
 * @title Identity Provider for Digital Identity
 * @author Alberto Ballesteros Rodríguez
 * @notice You can use this contract to generate digital identities based on smart contracts. All information stored must be encrypted.
-* @dev For more implementation details read the "design_pattern_desecions.md" document. 
+* @dev For more implementation details read the "design_pattern_decisions.md" document. 
 */
 contract Identity {
 
@@ -103,6 +103,7 @@ contract Identity {
     }
     
     /**
+    * @notice Enable the emergency stop.
     * @dev Owner of the smart contract activate the emergency stop. This will produce that no identities can be created or deleted.
     */
     function enableEmergency() 

@@ -8,7 +8,7 @@ Rinkeby addresses
 	
 	If you watch the code of the Identity contract, inside you will see the IdentityLib code too.
 	
-	The reaseon:
+	The reason:
 	
 	3. Contracts that use "imports" will need to have the code concatenated into one file as we do 
 	not support "imports" in separate files. You can try using the Blockcat solidity-flattener or 
