@@ -31,7 +31,7 @@ Contracts
 |___Identity.sol
 |	|___ PersonalIdentity.sol
 |___IdentityLib.sol
-|___OraclizeTest.sol
+|___OraclizePrice.sol
 ```
 
 ### Factory contract
